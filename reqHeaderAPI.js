@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-
+app.enable('trust proxy');
 app.get('/api/whoami', (req,res)=>
 {
     const ip = req.ip; // Get ip addr
